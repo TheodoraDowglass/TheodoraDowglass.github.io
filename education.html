@@ -11,37 +11,158 @@
 
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <style>
+
+        .container {
+        padding-top: 25px;
+        }
+
+        .figure{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        }
+
+    </style>
+
     </head>
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <main class="container">
 
-<div class="jumbotron text-center">
-<h1> 
-    This is a heading. 
-</h1>
+        <div class="shadow p-3 mb-5 bg-transparent rounded">
+            <nav class="navbar navbar-expand-sm bg-transparent navbar-dark">
+              <div class="container-fluid">
+                <span class="navbar">Gatehouse</span>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+      
+        <div class="row g-5">
+          <div class="col-md-8">
+      
+            <article class="blog-post">
+              <h2 class="blog-post-title">The Effect of the Internet on Education</h2>
+              <p class="blog-post-meta">by Shanai</p>
+              <h3 class="pb-4 mb-4 fst-italic border-bottom"></h3>
+      
+              <p>The internet allows people to access information relatively cheaply, instantly and in a variatry of formats. It's as simple as that.</p>
 
-<p>  
-    This is some text.
-</p>
-<p>
-    <a href="https://www.google.com"> This is a hyperlink </a>
-</p>
 
-<p>
-    <a href="https://www.amazon.co.uk"> As is this </a>
-</p>
-<ul style="list-style-position: inside;">
+                <figure class="figure">
+                    <img src=accessToInternet.png class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-end">Percentage of the world with access to the internet</figcaption>
+                  </figure>
 
-    <li> These </li>
-    <li> are </li>
-    <li> items </li>
-    <li> in </li>
-    <li> a </li>
-    <li> list </li>
+              <p>See how more people have access to the internet? That's a great thing!</p>
+              
+              
+              <h2>Inline HTML elements</h2>
+              <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+              <ul>
+                <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+                <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+              </ul>
+              <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+              <h2>Heading</h2>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h3>Sub-heading</h3>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <pre><code>Example code block</code></pre>
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+            <article class="blog-post">
+              <h2 class="blog-post-title">Another blog post</h2>
+              <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+      
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <blockquote>
+                <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+              </blockquote>
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <h3>Example table</h3>
+              <p>And don't forget about tables in these posts:</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Upvotes</th>
+                    <th>Downvotes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alice</td>
+                    <td>10</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>Bob</td>
+                    <td>4</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Charlie</td>
+                    <td>7</td>
+                    <td>9</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Totals</td>
+                    <td>21</td>
+                    <td>23</td>
+                  </tr>
+                </tfoot>
+              </table>
+      
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+            <article class="blog-post">
+              <h2 class="blog-post-title">New feature</h2>
+              <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+      
+              <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+              <ul>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ul>
+              <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+            </article>
+      
+      
+          </div>
+    
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
 
-  </ul>
-</div>
 </body>
 </html>
