@@ -10,6 +10,78 @@
 
     
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin');
+
+        
+        $primary: rgba(0,0,225,0.5);
+        body {
+        font-family: 'Cabin', sans-serif;
+        padding: 200px 10px;
+        color: #545454;
+        }
+        a {
+        color: inherit;
+        }
+        .parallax-text {
+        text-align: right;
+        margin-bottom: 16px;
+        }
+
+        .parallax-effect-container {
+        height: 350px;
+        overflow: hidden;
+        display: block;
+        background: black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        position: relative;
+        overflow: hidden;
+        }
+        .parallax-effect-content {
+        position: absolute;
+        display: block;
+        max-width: 100%;
+        top: 50%;
+        left: 0;
+        padding: 16px;
+        width: 100%;
+        transform-style: flat;
+        transform: translate3d(0,-50%,0);
+        }
+        .parallax-effect-image {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        background-attachment: fixed;
+        opacity: .7;
+        }
+
+        .text-center {
+        text-align: center;
+        margin-bottom: 15px;
+        display: block;
+        box-sizing: border-box;
+        max-width: 100%;
+        }
+
+        .invert {
+        color: white;
+        }
+
+
+        h2, li, p{
+            color:white;
+        }
+
+
         body {
             background-color: #dca1ff;
 
@@ -35,60 +107,30 @@
 
         }
 
+        img{
+            opacity: 0.8;
+        }
+
+        .quote{
+            height:fit-content;
+        }
+
+
+
+
+
+
+        
+
         .carousel-item {
-            height:150px;
+            height:200px;
+        }
+
+        .bg-primary{
+            background-color:rgba(0,0,225,0.5);
         }
 
 
-        .parallax1 {
-            background-color:#dca1ff;
-
-            background-image: url("invisiblewomen.jpg");
-            min-height:500px;
-
-
-            background-attachment:fixed;
-            background-position:center;
-            background-repeat:no-repeat;
-            background-size:cover;
-        }
-
-        .parallax2 {
-            background-color:#dca1ff;
-            background-image: url("joy.jpg");
-            min-height:500px;
-
-
-            background-attachment:fixed;
-            background-position:center;
-            background-repeat:no-repeat;
-            background-size:cover;
-
-            
-        }
-
-
-        .parallax3 {
-            background-color:#dca1ff;
-
-            background-image:url("datafeminism.png");
-            min-height:500px;
-
-
-            background-attachment:fixed;
-            background-position:center;
-            background-repeat:no-repeat;
-            background-size:cover;
-        }
-
-
-
-
-
-
-        
-        
-        
         
     </style>
   </head>
@@ -98,7 +140,7 @@
         
     </script>
     <div class="shadow p-3 mb-5 bg-transparent rounded">
-        <nav class="navbar navbar-expand-sm bg-transparent navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-transparent navbar-dark sticky-top">
           <div class="container-fluid">
             <span class="navbar">CS contributions to society</span>
             <ul class="navbar-nav">
@@ -130,14 +172,14 @@
 
 
     <!--Creates the Bootstrap 5 equivalent of a jumbotron-->
-    <div class="mt-4 p-5 bg-primary text-white rounded">
+    <div class="mt-4 p-5 text-white text-center rounded" style="background-color:rgba(0,0,225,0.5);">
         <h2>Data science gives us numbers we can use to definitevly demonstrate the work that still needs to be done to make the world more inclusive and safer for all</h2>
 
     </div>
 
 
     <!--Creates our Carousel of definitions for our page-->
-    <div id="carouselDefinitions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div id="carouselDefinitions" class="carousel carousel-light slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselDefinitions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselDefinitions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -177,60 +219,86 @@
       </div>
 
 
-      <div class="mt-4 p-5 bg-primary text-white rounded">
+      <div class="mt-4 p-5 text-white text-center rounded" style="background-color:rgba(0,0,225,0.5);">
         <p>It is well known in the data science community that there is a bias issue with Big Data. It is incredibly susectible to pre-existing biases and prejudices in our society - this is easy to understand as we humans have produced this data and so it reflects the worst part of our opinions back at us.</p>
         <p>The issue comes along when we try to build ML models and other decision making software, which are intended to have frequent usage in our day to day life. While the purpose of these machines is to improve the efficiency of decisions which have to be made repeatedly, if they are fed data sets with the same bias as our society has then they will reflect this back at us. </p>
     
 
     </div>
-    
 
-    
-    <div class="parallax1"></div>
-        <div class="row">
-            <div class="col-sm-8">
+    <!--Information supporting the argument-->
+    <div class="parallax-effect-container">
+        <div class="parallax-effect-image" style="background-image:url(invisiblewomen.jpg);"></div>
+        <div class="parallax-effect-content">
             <h2>Invisible women</h2>
-            <p>A book by Caroline Criado perez describes the ways this has already had a negative impact on vulnerably communities</p>
-            <ul>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-            </ul>
-            </div>
-            <div class="col-sm-4 bg-transparent">
-                <span></span>
-            </div>
+                <p class="parallax-text">A book by Caroline Criado perez describes the ways this has already had a negative impact on vulnerably communities</p>
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
 
         </div>
+    </div>
 
-    <div class="parallax2"></div>
-    <div class="row">
-        <div class="col-sm-4">
-            
+    <div class="quote">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+    </div>
 
-        </div>
-        <div class="col-sm-8">
+
+    <div class="parallax-effect-container">
+        <div class="parallax-effect-image" style="background-image: url(joy.jpg);"></div>
+        <div class="parallax-effect-content">
             <h2> Joy Buolamwini</h2>
-            <p>Founded the algorithmic justice league which who's MIT thesis uncovered large racial and gender bias in data used by Microsoft, IBM and amazon
+            <p class="parallax-text">Founded the algorithmic justice league which who's MIT thesis uncovered large racial and gender bias in data used by Microsoft, IBM and amazon
             Helped make the film coded bias which talks about [list the issues the documentary brings up]</p>
+
         </div>
-        
-
-
     </div>
 
-    <div class="parallax3"></div>
-    <div class="row">
-        <div class="col-sm-8">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+
+    <div class="parallax-effect-container">
+        <div class="parallax-effect-image" style="background-image: url(datafeminism.png)"></div>
+        <div class="parallax-effect-content">
             <h2>Data Feminism</h2>
-            <p>Discusses pernicious feedback loop where areas which are poorer or match the stereotype of people likely to commit crime will be more heavily policed and so keeps the status quo in place</p>
-        
-        </div>
-        <div class="col-sm-4">
+            <p class="parallax-text">Discusses pernicious feedback loop where areas which are poorer or match the stereotype of people likely to commit crime will be more heavily policed and so keeps the status quo in place</p>
 
         </div>
+    </div>
+
+
+
+
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+            </figure>
+
+    <div class="mt-4 p-5 text-white rounded " style="background-color:rgba(0,0,225,0.5);">
+        <h2 class="text-center">Statistics hold <em>power</em></h2>
+    
 
     </div>
+
 
 
     <div class="card-group">
@@ -260,9 +328,10 @@
 
     
     
+    <div class="mt-4 p-5 text-white rounded" style="background-color:rgba(0,0,225,0.5);">
 
     <p>We now have the raw numbers to show we need to do better. It's a shame we live in a world where we cannot rely on testimony to inspire people to make change but numbers don't lie so we now have a new tool in our arsenal to enact positve change. </p>
-
+    </div>
 </body>
 
 </html>
