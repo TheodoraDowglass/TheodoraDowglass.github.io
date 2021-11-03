@@ -57,6 +57,7 @@
 
 }
 .bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,7 +72,7 @@
   min-height: 400px;
 }
 .bgimg-3{
-  background-image: url("Temp3.jpg");
+  background-image: url("TitleBackgroundImage3.jpg");
   min-height: 400px;
 }
 .ImageText {
@@ -99,7 +100,7 @@
 .caption {
   position: absolute;
   left:0;
-  top:2300px;
+  top: 50%;
   width:100%;
   text-align: center;
   color: #dca1ff;
@@ -112,7 +113,88 @@
   font-size: 25px;
   letter-spacing: 10px;
 }
+ol {
+	position: relative;
+	display: block;
+	margin: 100px;
+	height: 4px;
+	background: #dca1ff;
+}
+ol::before,
+ol::after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	display: block;
+	width: 0;
+	height: 0;
+  border-radius: 10px;
+	border: 10px solid #dca1ff;
+}
+ol::before {
+	left: -5px;
+}
+ol::after {
+	right: -10px;
+	border: 10px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #dca1ff;
+  border-radius: 3px;
+}
 
-span.small {
-  font-size: 6px;
+/* ---- Timeline elements ---- */
+li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 150px;
+	font: bold 14px arial;
+  height: 50px;
+}
+li .diplome {
+  position: absolute;
+  top: -47px;
+  left: 36%;
+  color: #000000;
+}
+li .point {
+	content: "";
+	top: -4px;
+	left: 43%;
+	display: block;
+	width: 6px;
+	height: 6px;
+	border: 4px solid #dca1ff;
+	border-radius: 10px;
+	background: #fff;
+  position: absolute;
+}
+li .description {
+  display: none;
+  background-color:#f1daff;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+.description::before {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+/* ---- Hover effects ---- */
+li:hover {
+	cursor: pointer;
+  color: #000000;
+}
+li:hover .description {
+  display: block;
 }
