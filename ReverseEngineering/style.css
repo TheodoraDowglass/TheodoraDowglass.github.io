@@ -1,0 +1,18 @@
+body {
+    background-color:#dca1ff
+}
+
+.row {
+    background-color: #ffffff
+}
+
+.pageHeader {
+    background-color: #ffffff
+}
+
+.pageHeader h1 {
+    text-align: center;
+}
+.pageHeader p {
+    text-align: center;
+}
