@@ -76,7 +76,7 @@
   min-height: 400px;
 }
 .ImageText {
-  background-image: url(TitleBackgroundImage3.jpg);
+  background-image: url(lastBackground.jpg);
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
